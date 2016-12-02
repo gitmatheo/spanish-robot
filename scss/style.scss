@@ -1,0 +1,976 @@
+@import "partials/reset";
+@import "partials/mixins.scss";
+@import "partials/variables";
+@import "partials/main";
+
+
+
+/* Zad5 komentarze /* sa kompilowane do pliku .css komentarze //  nie sa */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+/* ############ CUSTOM CSS ############*/
+
+body {
+	background: black;
+	font-family: 'Chewy', cursive;
+	color: rgba(255,255,255, 0.9);
+	text-shadow: 1px 1px 7px rgba(8,8,8, 0.7);
+
+}
+
+.startContainer {
+	width: 100vw;
+	height: 100vh;
+	// max-width: 1366px;
+	// max-height: 768px;
+}
+.hidden {
+	opacity: 0;
+	// display: none!important;
+	transition: 2s;
+}
+
+.hide {
+	display: none;
+}
+.hiddenVis {
+	visibility: hidden;
+}
+
+.flex{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.btn-container{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top:45%;
+	left: 45%;
+	font-size: 60px;
+	z-index:20;
+}
+#canvas-radial {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+		z-index: -1;
+}
+
+
+#mainscreen {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 85px;
+	color: rgba(255,255,255, 1);
+}
+
+
+.mainscreen-box {
+	font-size: 80px;
+	position: absolute;
+	top:20%;
+	left:31%;
+	p {
+		font-size: 35px;
+		padding: 10px 0 0 0;
+	}
+}
+
+
+
+.button {
+	display: inline-block;
+	z-index: 20;
+	padding: 10px 17px 7px 15px;
+	border: 3px solid rgba(255,255,255, 0.9);
+	border-radius: 20px;
+	margin: 60px 0 0 0;
+	align-self: center;
+	cursor:pointer;
+}
+
+.button:hover {
+	display: inline-block;
+	z-index: 1;
+	padding: 10px 17px 7px 15px;
+	border: 3px solid rgba(255,255,255, 0.9);
+	border-radius: 10px;
+	margin: 60px 0 0 0;
+	align-self: center;
+}
+
+.circle-1, .circle-2, .circle-3 {
+	transform-origin: 50%;
+}
+
+.rotationClockwise {
+	animation: rotationClockwise 2s infinite;
+}
+
+.rotationCounterClockwise {
+	animation: rotationCounterClockwise 2s infinite;
+}
+
+.playBtn {
+	position: absolute;
+	top:50%;
+	left:45%;
+}
+
+.rotate {
+	animation: rotationCounterClockwise 4s infinite;
+	transform-origin: 50%;
+}
+
+
+
+#gameSprocket {
+	position: absolute;
+	top: 300px;
+	left: 0;
+	width: 100px;
+}
+
+#startSprocket {
+	position: absolute;
+	top: 310px;
+	left: 800px;
+	width: 192px;
+}
+
+.playNow {
+	transform: rotate(22deg);
+  position: absolute;
+  top: 50%;
+  left: 35%;
+	h2 {
+
+		font-size: $fontBig;
+		color: white;
+	}
+}
+
+
+.flashAnimation{
+		animation: flash 1s infinite;
+}
+
+
+
+/* game */
+
+.gameContainer {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	overflow: hidden;
+
+}
+
+.col1, .col2, .col3 {
+	// border: 1px solid black;
+}
+
+.col2 {
+	position: relative;
+	width: 40%;
+}
+
+.robotContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cardContainer {
+	position: absolute;
+	top: 4%;
+	left: 24%;
+	width: 51%;
+	height: 21%;
+}
+
+.card {
+	position: relative;
+	text-align: center;
+	line-height: 150px;
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: 3px solid white;
+	border-radius: 15px 15px 5px 5px;
+	transition: all 1s ease;
+	transform-style: preserve-3d;
+}
+h2 {
+	margin: 0px;
+}
+.front, .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 200%;
+	font-size: $fontMedium;
+	color: white;
+	backface-visibility: hidden;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+.card:hover,  .flip {
+	transform: rotateY(180deg);
+}
+
+
+#next {
+	position: absolute;
+	display: inline-block;
+	top: 113%;
+	left: 52.5%;
+	width: 20%;
+	padding: 0 23% 0 5%;
+	font-size: $fontMedium;
+	text-align: center;
+	border: 3px solid white;
+	border-radius: 5px 5px 16px 5px;
+	color: white;
+	i {
+		padding-left: 67%;
+	}
+}
+
+#next:hover {
+	cursor: pointer;
+}
+
+#flip {
+	position: absolute;
+	display: inline-block;
+	top: 113%;
+	left: 0;
+	width: 20%;
+	padding:0 18% 0 10%;
+	font-size: $fontMedium;
+	border: 3px solid white;
+	border-radius: 5px 5px 5px 16px;
+	text-align: center;
+	color: white;
+}
+
+#crossBtn {
+	position: absolute;
+	display: inline-block;
+	top: 113%;
+	left: 0;
+	width: 20%;
+	padding:0 18% 0 10%;
+	font-size: $fontMedium;
+	border: 3px solid white;
+	border-radius: 5px 5px 5px 16px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	i {
+		padding-left: 40%;
+	}
+}
+
+/* CHALLENGE */
+
+#spanishSigns {
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: white;
+	z-index: 30;
+	li {
+		font-size: $fontMedium;
+		width: 10%;
+		height: 70%;
+		margin: 0px 0.5%;
+		background-color: rgba(255,255,255, 0.2);
+		border: 2px solid white;
+		border-radius: 9px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: transform 0.4s ease;
+		&:hover {
+			background-color: rgba(255,255,255, 0.6);
+			border: 2px solid white;
+			border-radius: 12px;
+			transform: scale(1.2);
+		}
+	}
+}
+
+
+.challengeContainer {
+	position: absolute;
+	top: 4%;
+	left: 24%;
+	width: 51%;
+	height: 21%;
+}
+
+
+
+.challengeView {
+	position: relative;
+	text-align: center;
+	line-height: 100px;
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: 3px solid white;
+	border-radius: 25px 25px 5px 5px;
+	transition: all 1s ease;
+	transform-style: preserve-3d;
+}
+
+
+
+
+.challengeCard {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: $fontMedium;
+	color: white;
+	backface-visibility: hidden;
+}
+
+input[name="answer"] {
+	background: transparent;
+  border: 3px solid rgba(255,255,255, 0.9);
+  border-radius: 5px 5px 20px 20px;
+  position: absolute;
+  top: 110%;
+  left: -0.75%;
+  width: 99.5%;
+  height: 28%;
+  font-size: $fontSmall;
+	font-family: 'Chewy', cursive;
+  color: white;
+  outline: none;
+}
+
+
+input[name="answer"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255,255,255, 0.8);
+}
+input[name="answer"]::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(255,255,255, 0.8);
+}
+input[name="answer"]:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(255,255,255, 0.8);
+}
+input[name="answer"]:-moz-placeholder { /* Firefox 18- */
+  color: rgba(255,255,255, 0.8);
+}
+
+#checkBtn {
+	display: inline-block;
+  position: absolute;
+  /*box-sizing: border-box;*/
+  top: 257px;
+  left: 180px;
+  font-size: 106%;
+  border: 2px solid rgba(255,255,255, 0.9);
+  border-radius: 0px 0px 26px 25px;
+  // padding: 2% 3px 7.3% 3px;
+	transition: transform 0.5s ease;
+	&:hover {
+		background-color: rgba(255,255,255, 0.2);
+	  border: none;
+		transform: scale(1.2);
+	}
+}
+
+
+
+/* STAGE PROGRESS BAR */
+
+#bar1 {
+		box-sizing: border-box;
+		border: 3px solid rgba(255,255,255, 0.9);
+    height: 5%;
+    width: 100%;
+    margin: 1% 0;
+    border-radius: 5px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		h2 {
+			width: 20%;
+			p {
+				width: 10%;
+			}
+		}
+
+}
+
+.progress-bar span {
+    display: block;
+		background-color: white;
+		border-radius: 2px;
+    height: 100%;
+    width: 50%;
+		font-size: 25px;
+		color: white;
+		text-shadow: 1px 1px 7px rgba(8,8,8, 0.7);
+
+}
+
+/* LEVEL PROGRESS BAR */
+#levelBar {
+		box-sizing: border-box;
+		border: 3px solid rgba(255,255,255, 0.9);
+		transform: rotateX(180deg);
+    height: 80%;
+    width: 5%;
+		position: absolute;
+		left: 20px;
+		top:13%;
+    margin: 5px 0;
+    border-radius: 5px;
+		span {
+			transform: rotateX(0deg);
+			display: inline-block;
+			background-color: white;
+			transform: none;
+			font-size: 23px;
+			color: white;
+			text-shadow: 1px 1px 7px rgba(8,8,8, 0.7);
+			width:100%;
+		}
+		#percentCounter {
+
+			position: absolute;
+			left:115%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			span {
+				background-color: transparent;
+				transform: rotateX(180deg);
+				display: inline-block;
+				font-size: 33px;
+
+				}
+			}
+		h2 {
+			width: 150px;
+			display: inline;
+			color: white;
+			span {
+				background-color: transparent;
+				display: inline;
+				width:20%;
+				font-size: 33px;
+			}
+		}
+
+}
+
+
+
+.rotate180 {
+	transform: rotateX(180deg);
+  position: absolute;
+  left: 115%;
+  top: 93%;
+  font-size: 25px;
+  width: 150px;
+	border-bottom: 2px solid white;
+	font-size: 34px;
+}
+
+/* SCORES AND COMBOS*/
+#score {
+	position: absolute;
+	top:0;
+	left:0;
+	padding: 10px;
+	font-size: $fontMedium;
+	color: white;
+}
+#scoresAndCombos {
+	width: 100px;
+	height: 200px;
+	position: absolute;
+	top:100px;
+	left:200px;
+	font-size: $fontSmall;
+	text-align: center;
+}
+
+#scoreEarned {
+	position: absolute;
+	transform: rotate(-35deg);
+	font-size: $fontMedium - 0.313em;
+}
+
+#correctCombo {
+	font-size: $fontMedium - 0.625em;
+	transform: rotate(15deg);
+}
+
+#doubleCorrectCombo {
+	font-size: $fontMedium;
+	transform: rotate(-25deg);
+}
+
+
+
+
+
+/* ROBOT */
+#g {
+  position: relative;
+}
+#robot {
+
+  width: 100%;
+	height: 80%;
+
+
+
+}
+
+#leftFoot {
+	animation: bounce 2s infinite;
+}
+#rightFoot {
+	animation: bounce 4s infinite;
+}
+
+#leftLeg {
+
+}
+#rightLeg {
+
+}
+
+#leftHand {
+	transform-origin: 50%;
+	animation: swing 5s infinite;
+}
+#rightHand {
+  -ms-transform: translateX(50px, 100px); /* IE 9 */
+  -webkit-transform: translateX(50px, 100px); /* Safari */
+  transform: translatex(50px, 100px);
+  transform-origin: 50%;
+  animation: swing 2s infinite;
+}
+
+#leftArm {
+
+}
+
+#rightArm {
+
+}
+
+#head {
+  transform-origin: 50%;
+}
+
+#body {
+
+}
+#rectangle {
+
+}
+
+#leftEar {
+	transform-origin: 50%;
+	transform: translate(25px,0px);
+}
+
+#rightEar {
+	transform-origin: 50%;
+	transform: translate(-25px,0px);
+}
+
+#leftChin {
+
+}
+
+#rightChin {
+
+}
+
+#leftRect {
+
+}
+
+#rightRect {
+
+}
+
+
+
+
+
+/* ANIMATIONS */
+
+.pulse {
+	animation: pulse 0.5s;
+}
+
+.shake {
+	animation: shake 0.5s;
+}
+
+@keyframes rotationClockwise {
+	to {
+		-ms-transform: rotate(360deg); /* IE 9 */
+		-webkit-transform: rotate(360deg); /* Safari */
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes translateAnimation {
+	to {
+		-ms-transform: translate(0px,0px); /* IE 9 */
+		-webkit-transform: translate(0px,0px); /* Safari */
+		transform: translate(0px,0px);
+	}
+}
+
+.translateAnimation {
+	animation: translateAnimation 0.3s ease-in-out 2 alternate;
+}
+
+@keyframes rotationCounterClockwise {
+	to {
+		-ms-transform: rotate(-360deg); /* IE 9 */
+		-webkit-transform: rotate(-360deg); /* Safari */
+		transform: rotate(-360deg);
+	}
+}
+
+/* MODALS */
+#myBtn {
+	position: absolute;
+	top: -19px;
+	right: 0px;
+	width: 150px;
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.3);
+	color: white;
+	border: 3px solid rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	transition: top 0.5s ease;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	font-size: 20px;
+	&:hover {
+		top:-10px;
+		cursor: pointer;
+	}
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+		font-size: $fontSmall;
+		a {
+			outline: none;
+		}
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    color: black;
+    border: 1px solid #888;
+		border-radius: 10px;
+		-webkit-box-shadow: 2px 2px 8px 2px rgba(50, 50, 50, 0.24);
+		-moz-box-shadow:    2px 2px 8px 2px rgba(50, 50, 50, 0.24);
+		box-shadow:         2px 2px 8px 2px rgba(50, 50, 50, 0.24);
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+#statistics {
+	font-size: $fontSmall;
+	text-align: center;
+}
+
+#myModal span:not(.close) {
+	color: green;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Correct Modal */
+.correct {
+	text-align: center;
+	font-size: 50px;
+	width: 20%;
+	color: black;
+}
+
+.correct h2 i {
+	color: green;
+}
+
+/* Wrong Modal */
+.wrong {
+	text-align: center;
+	font-size: $fontMedium;
+	width: 40%;
+	color: black;
+	line-height: 50px;
+}
+
+.wrong h2 i {
+	color: red;
+}
+
+.wrong p {
+	font-size: 30px;
+
+}
+#english {
+	font-size: 40px;
+	color: green;
+}
+.wrong h3 {
+	font-size: 35px;
+}
+
+/* challenge Modal */
+.challenge {
+	text-align: center;
+	font-size: $fontMedium;
+	width: 50%;
+	color: black;
+
+}
+.challenge i {
+	color: #405FE8;
+	font-size: $fontMedium;
+}
+
+.challenge ul li {
+	text-align: left;
+	font-size: 37%;
+	line-height: 200%;
+}
+
+.wrong {
+	text-align: center;
+	font-size: $fontMedium;
+	width: 40%;
+	color: black;
+	line-height: 50px;
+}
+
+.lvlUp  {
+	color: black;
+	font-size: 45px;
+	text-align: center;
+	line-height: 50px;
+	.fa-level-up {
+		color: orange;
+	}
+	.fa-thumbs-up {
+		color: green;
+	}
+	p {
+		text-align: left;
+	}
+}
+
+.lvlUp p {
+	font-size: 30px;
+}
+
+.welcome {
+	font-size: 30px;
+	text-align: center;
+	width: 55%;
+	line-height: 33px;
+	h2 {
+		font-size: 45px;
+		margin: 20px;
+	}
+	h3 {
+		font-size: 40px;
+		margin: 20px;
+		i{
+			color: green;
+			margin: 20px 0 0 0;
+			font-size: 45px;
+		}
+	}
+}
+
+.nxtStage {
+	text-align: center;
+	h2{
+		font-size: 45px;
+		span {
+			color:green;
+		}
+	}
+	h3 {
+		font-size: 40px;
+	}
+}
+
+.fa-level-up {
+	color: orange;
+}
+
+.fa-thumbs-up {
+	color: green;
+}
+
+
+.p5, .p20, .p50, .stageWords {
+	font-size: 32px;
+	span {
+		color: green;
+		font-size: 40px;
+	}
+}
+
+
+
+
+@media only screen and (max-width: 640px)  {
+    .col2 {
+        width: 90%;
+    }
+}
+
+
+// Small devices (landscape phones, 544px and up)
+@media (min-width: 544px) {
+	.col2 {
+			width: 90%;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.col2 {
+			width: 75%;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.col2 {
+			width: 60%;
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	.col2 {
+			width: 40%;
+	}
+}
