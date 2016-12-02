@@ -1,331 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en-us">
+  <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" style="text/css">
-    <link rel="stylesheet" href="css/style.css" style="text/css">
-    <link rel="stylesheet" href="css/animate.css" style="text/css">
-</head>
-<body>
-<canvas id="canvas-radial"></canvas>
-<!-- #### START VIEW #### -->
-<div class="startContainer flex">
-  <div id="mainscreen" class="test2">
-    <div class="mainscreen-box">
-      <h1 class="title animated fadeInDown">Spanish Robot</h1>
-      <p class="subtitle animated shake">learn 100 spanish words <br>by playing game</p>
-    </div>
-    <div class="btn-container">
-      <div class="button animated fadeInUp">PLAY</div>
-    </div>
-  </div>
-  <div class="playNow wobble">
-    <img id="arrow" src="svg/arrow.svg" alt="mechanics">
-    <!-- <img id="arrow" src="svg/cupcake.svg" alt="mechanics"> -->
-    <h2 class="flashAnimation">Try now</h2>
-  </div>
+    <title>Spanish-robot by gitmatheo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Spanish-robot</h1>
+      <h2 class="project-tagline">Project created on CodersLab workshops</h2>
+      <a href="https://github.com/gitmatheo/spanish-robot" class="btn">View on GitHub</a>
+      <a href="https://github.com/gitmatheo/spanish-robot/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/gitmatheo/spanish-robot/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-  <div class="mechanics">
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="startSprocket" viewBox="0 0 418.879 418.879" style="enable-background:new 0 0 418.879 418.879;" xml:space="preserve" >
-  <g>
-  	<g>
-  		<path class="circle-1" d="M188.634,234.066c8.462-5.287,16.126-11.735,22.767-19.127l23.942,13.826l21.8-37.76l-23.894-13.796    c3.038-9.275,4.825-19.113,5.16-29.311l27.183-4.793l-7.574-42.938l-27.178,4.793c-3.756-9.309-8.795-17.965-14.906-25.744    l17.766-21.17L200.3,30.022l-17.751,21.152c-8.67-4.646-18.059-8.119-27.954-10.203V13.385h-43.6v27.586    c-9.896,2.084-19.285,5.557-27.956,10.203l-17.75-21.152l-33.4,28.025l17.764,21.17c-6.11,7.779-11.149,16.436-14.905,25.744    L7.57,100.168L0,143.106l27.179,4.793c0.335,10.199,2.123,20.035,5.161,29.313L8.444,191.007l21.801,37.759l23.943-13.822    c6.639,7.389,14.303,13.838,22.766,19.125l-9.451,25.963l40.972,14.91l9.438-25.928c4.864,0.688,9.831,1.053,14.882,1.053    c5.051,0,10.019-0.363,14.883-1.053l9.437,25.93l40.97-14.914L188.634,234.066z M132.793,200.065    c-30.702,0-55.68-24.977-55.68-55.68c0-30.701,24.978-55.68,55.68-55.68s55.68,24.979,55.68,55.68    C188.473,175.088,163.496,200.065,132.793,200.065z" fill="rgba(255,255,255, 0.9)"/>
-  		<path class="circle-2" d="M376.041,266.807l-18.795,6.08c-3.584-6.229-8.014-11.869-13.115-16.779l10.504-16.764l-26.447-16.57l-10.498,16.75    c-6.604-2.438-13.602-3.973-20.826-4.471l-2.725-19.559l-30.912,4.309l2.725,19.559c-6.809,2.453-13.125,5.847-18.812,9.996    l-14.672-13.244l-20.912,23.168l14.684,13.259c-3.562,6.118-6.277,12.752-8.02,19.726l-19.744-0.714l-1.129,31.188l19.743,0.716    c1.246,7.198,3.486,13.991,6.558,20.271l-15.578,12.143l19.185,24.615l15.609-12.164c5.438,4.582,11.511,8.396,18.031,11.311    l-4.138,19.344l30.522,6.52l4.133-19.314c3.516,0.01,7.072-0.229,10.652-0.727c3.582-0.498,7.07-1.25,10.447-2.215l9.256,17.451    l27.574-14.623l-9.266-17.471c5.48-4.586,10.271-9.918,14.252-15.812l18.338,7.436l11.727-28.924l-18.303-7.422    c1.234-6.875,1.529-14.027,0.764-21.293l18.799-6.084L376.041,266.807z M297.129,350.006    c-21.771,3.031-41.949-12.209-44.98-33.977c-3.037-21.769,12.207-41.949,33.977-44.979c21.768-3.036,41.941,12.207,44.98,33.978    C334.135,326.795,318.896,346.969,297.129,350.006z" fill="rgba(255,255,255, 0.9)"/>
-  		<path class="circle-3" d="M418.146,158.647l0.732-24.629l-15.586-0.463c-0.977-5.428-2.723-10.803-5.285-15.971l12.24-9.67l-15.271-19.33    l-12.238,9.666c-4.365-3.627-9.193-6.584-14.318-8.816l3.164-15.291l-24.123-4.996l-3.17,15.281    c-5.559,0.008-11.156,0.797-16.641,2.412l-7.391-13.727l-21.695,11.684l7.391,13.729c-4.363,3.686-8.107,7.934-11.176,12.566    l-14.496-5.77l-9.111,22.893l14.508,5.779c-0.955,5.508-1.141,11.158-0.514,16.799l-14.809,4.898l7.732,23.395l14.809-4.896    c2.9,4.986,6.426,9.396,10.426,13.201l-8.191,13.268l20.963,12.946l8.209-13.292c5.285,1.896,10.828,3.051,16.453,3.414    l2.252,15.453l24.383-3.561l-2.246-15.434c2.602-0.957,5.17-2.109,7.684-3.463c2.516-1.352,4.891-2.867,7.123-4.51l11.648,10.371    l16.387-18.398l-11.656-10.383c2.795-4.9,4.875-10.164,6.203-15.619L418.146,158.647z M359.436,171.844    c-15.281,8.227-34.404,2.492-42.627-12.783c-8.23-15.277-2.494-34.404,12.787-42.627c15.273-8.229,34.395-2.49,42.625,12.787    C380.443,144.499,374.711,163.616,359.436,171.844z" fill="rgba(255,255,255, 0.9)"/>
-  	</g>
-  </g>
-  </svg>
-</div>
+    <section class="main-content">
+      <p>This is Spanish Robot. My first project created on CodersLab workshops. It is still in progress (non responsive yet) and works best on 1366x768 resolution.</p>
 
-<!-- #### GAME VIEW #### -->
-<div class="gameContainer hidden">
-  <div class="col1">
-    <div id="levelBar" data-value="0">
-        <span></span>
-        <div id="percentCounter">
-          <span>60%</span>
-        </div>
-        <h2 class="levelUp rotate180">Level: <span>1</span></h2>
-    </div>
-    <div id="score">
-      <h2>Score: <span>1</span></h2>
-      <p class="viewScoreToNextLvl">Score to next level: <span></span></p>
-    </div>
-    <div id="scoresAndCombos">
-      <div id="scoreEarned" class="hidden">
-        <p><span>+</span> <span>5</span> score</p>
-      </div>
-      <div id="correctCombo" class="hidden">
-        <p><span>+</span> <span>20</span> Correct Combo</p>
-      </div>
-      <div id="doubleCorrectCombo" class="hidden">
-        <p><span>+</span> <span>50</span> Double Correct Combo</p>
-      </div>
-    </div>
-  </div>
+<p>"Hola!
+      Welcome to Spanish Robot world. Everyone like to play games but many people don't have motivation to learn foreign languages. It's time to change that. Do you know that Spanish is one of the most widely spoken language in the world ? This game is going to teach you the first 100 spanish words simply by playing it. You have many challenges to achieve and big amounts of points and bonuses to collect. You can always click on statistics to find out about your current progress. 
+      Enjoy the learning process and have fun"</p>
 
-  <div class="col2">
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/gitmatheo/spanish-robot">Spanish-robot</a> is maintained by <a href="https://github.com/gitmatheo">gitmatheo</a>.</span>
 
-    <div id="bar1" class="progress-bar" data-value="0">
-        <!-- <h2 class="stage">Stage: <p>1</p></h2> -->
-        <span></span>
-    </div>
-    <ul id="spanishSigns">
-      <li><span>á</span></li>
-      <li><span>é</span></li>
-      <li><span>í</span></li>
-      <li><span>ñ</span></li>
-      <li><span>ó</span></li>
-      <li><span>ú</span></li>
-      <li><span>ü</span></li>
-      <li><span>¿</span></li>
-      <li><span>¡</span></li>
-    </ul>
-    <div class="robotContainer">
-      <svg version="1.1" id="robot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100vw" height="auto" viewBox="420 0 1080 1080" enable-background="new 420 0 1080 1080"  preserveAspectRatio="none">
-      <g id="g">
-        <path id="leftFoot" d="M868.431,970.369h-39.057c-40.516,0-73.478,32.963-73.478,73.478v18.661c0,9.662,7.833,17.494,17.494,17.494h130.627
-          c9.661,0,17.494-7.832,17.494-17.494v-74.644c0-9.662-7.833-17.495-17.494-17.495h-0.509c0.001-0.012,0.002-0.024,0.003-0.036
-          h-35.079C868.433,970.345,868.432,970.357,868.431,970.369z M886.522,1045.011h-95.637v-1.166
-          c0-21.223,17.266-38.488,38.488-38.488h57.148V1045.011z" fill="rgba(255,255,255, 1)"/>
-        <path id="leftHand" d="M706.571,822.928l-27.598-13.798c0.001-0.039,0.003-0.081,0.005-0.12l-35.02,0.072c0,0.002,0,0.004,0,0.006l-27.677,13.837
-          c-5.93,2.965-9.673,9.022-9.673,15.649v55.983c0,6.627,3.743,12.685,9.671,15.646l37.321,18.661c2.513,1.258,5.181,1.85,7.81,1.85
-          c6.417,0,12.597-3.545,15.661-9.673c4.322-8.643,0.819-19.151-7.823-23.471l-27.65-13.825v-34.357l19.827-9.914l19.827,9.914
-          v26.508c0,9.661,7.833,17.494,17.494,17.494c9.662,0,17.495-7.833,17.495-17.494v-37.322
-          C716.242,831.947,712.498,825.89,706.571,822.928z" fill="rgba(255,255,255, 1)"/>
-        <path id="rightArm" d="M1156.996,641.59c34.772,24.255,59.352,59.024,73.127,103.713c8.302,26.931,10.408,50.822,10.893,63.697h35.024
-          c-0.46-14.745-2.721-41.808-12.094-72.741c-17.556-57.936-52.333-103.47-100.815-132.313l-6.838,38.838
-          C1156.531,642.388,1156.768,641.992,1156.996,641.59z" fill="rgba(255,255,255, 1)"/>
-        <path id="leftArm" d="M656.056,736.259c-9.39,30.99-11.644,58.097-12.097,72.823l35.02-0.072c1.108-29.317,10.759-116.015,83.937-167.375
-          L756.784,604C708.345,632.846,673.601,678.359,656.056,736.259z" fill="rgba(255,255,255, 1)"/>
-        <path id="leftRect" d="M551.473,279.454l-0.125-37.308c-0.012,0.149-0.028,0.296-0.04,0.446h-24.455l0.113,34.989h24.341
-          C551.355,278.208,551.42,278.829,551.473,279.454z" fill="rgba(255,255,255, 1)"/>
-        <path id="leftEar" d="M526.754,242.592c-7.319-21.67-27.828-37.322-51.938-37.322c-30.226,0-54.816,24.59-54.816,54.816
-          s24.591,54.816,54.816,54.816c24.109,0,44.618-15.651,51.938-37.321h0.212l-0.113-34.989H526.754z M474.816,279.914
-          c-10.933,0-19.827-8.894-19.827-19.827s8.895-19.827,19.827-19.827s19.827,8.894,19.827,19.827S485.749,279.914,474.816,279.914z"
-          fill="rgba(255,255,255, 1)" fill="rgba(255,255,255, 1)"/>
-        <path id="leftChin" d="M585.615,260.086c0-43.461,14.921-84.241,39.635-111.999v-46.724c-42.056,29.534-69.294,81.623-73.903,140.782
-          l0.125,37.308c4.934,58.568,32.061,110.06,73.777,139.355v-46.726C600.536,344.328,585.615,303.548,585.615,260.086z" fill="rgba(255,255,255, 1)"/>
-        <path id="head" class="shake" d="M1294.834,148.185v-46.76c-0.035-0.024-0.068-0.051-0.104-0.075v-9.211c0-50.804-41.334-92.138-92.139-92.138H717.408
-          c-50.805,0-92.139,41.334-92.139,92.138v9.211c-0.007,0.005-0.013,0.01-0.02,0.014v46.724c0.007-0.007,0.013-0.015,0.02-0.022
-          v224.041c-0.007-0.007-0.013-0.015-0.02-0.022v46.726c0.007,0.004,0.013,0.009,0.02,0.014v9.211
-          c0,50.805,41.334,92.139,92.139,92.139h187.775v39.654h-94.471c-26.545,0-48.74,18.969-53.75,44.063
-          c-0.06,0.036-0.119,0.073-0.179,0.109l6.131,37.635c0.028-0.02,0.054-0.039,0.082-0.059c9.424,16.631,27.275,27.886,47.716,27.886
-          h38.488v0.038h34.989v-0.04h151.619v0.04h34.992v-0.04h38.487c19.942,0,37.414-10.713,47.004-26.676l6.838-38.838
-          c-0.031-0.019-0.061-0.038-0.091-0.056c-5.013-25.095-27.208-44.063-53.753-44.063h-94.471v-39.654h187.775
-          c50.805,0,92.139-41.334,92.139-92.139v-9.211c0.007-0.005,0.013-0.01,0.02-0.014v-46.724c-0.007,0.007-0.013,0.015-0.02,0.022
-          V148.065C1294.766,148.104,1294.799,148.145,1294.834,148.185z M1109.287,594.816c10.929,0,19.818,8.885,19.827,19.811
-          c0,0.023-0.002,0.047-0.002,0.07c-0.03,10.907-8.911,19.773-19.825,19.773H977.494v-0.096h-34.988v0.096H810.713
-          c-10.914,0-19.795-8.866-19.825-19.773c0-0.023-0.002-0.047-0.002-0.07c0.009-10.926,8.898-19.811,19.827-19.811h131.793v0.059
-          h34.988v-0.059H1109.287z M940.173,559.827v-39.654h39.654v39.654H940.173z M1259.741,428.034
-          c0,31.512-25.638,57.149-57.149,57.149H717.408c-31.512,0-57.149-25.638-57.149-57.149V92.138
-          c0-31.511,25.638-57.149,57.149-57.149h485.184c31.512,0,57.149,25.638,57.149,57.149V428.034z" fill="rgba(255,255,255, 1)"/>
-        <rect id="rectangle" x="942.506" y="594.875" width="34.988" height="39.5" fill="rgba(255,255,255, 1)"/>
-        <path id="rightChin" d="M1294.834,101.425v46.76c24.663,27.753,39.551,68.49,39.551,111.902c0,43.461-14.921,84.241-39.635,111.999v46.724
-          c42.094-29.56,69.345-81.715,73.917-140.94v-35.565C1364.098,183.119,1336.879,130.995,1294.834,101.425z" fill="rgba(255,255,255, 1)"/>
-        <path id="rightEar" d="M1445.184,205.27c-24.109,0-44.618,15.652-51.938,37.322h-0.079v34.989h0.079c7.319,21.67,27.828,37.321,51.938,37.321
-          c30.227,0,54.816-24.59,54.816-54.816S1475.41,205.27,1445.184,205.27z M1445.184,279.914c-10.933,0-19.827-8.894-19.827-19.827
-          s8.895-19.827,19.827-19.827s19.827,8.894,19.827,19.827S1456.116,279.914,1445.184,279.914z" fill="rgba(255,255,255, 1)"/>
-        <path id="rightRect" d="M1368.692,242.592c-0.007-0.096-0.018-0.191-0.025-0.288v35.565c0.008-0.097,0.019-0.192,0.025-0.288h24.475v-34.989
-          H1368.692z" fill="rgba(255,255,255, 1)"/>
-        <path id="rightHand" d="M1241.021,809.133l-27.593,13.795c-5.927,2.962-9.671,9.02-9.671,15.646v37.322c0,9.662,7.833,17.494,17.495,17.494
-          c9.661,0,17.494-7.832,17.494-17.494v-26.51l19.827-9.914l19.827,9.914v34.356l-27.65,13.825
-          c-8.643,4.32-12.146,14.829-7.823,23.471c3.064,6.131,9.241,9.676,15.66,9.674c2.629,0,5.298-0.595,7.811-1.85l37.321-18.661
-          c5.927-2.962,9.671-9.021,9.671-15.647v-55.982c0-6.627-3.744-12.685-9.671-15.647l-27.677-13.837
-          c-0.001-0.028-0.002-0.06-0.003-0.088h-35.024C1241.018,809.043,1241.02,809.09,1241.021,809.133z" fill="rgba(255,255,255, 1)"/>
-        <path id="leftLeg" d="M901.451,857.938c-10.648,18.165-29.557,57.54-33.018,112.396h35.079c3.807-51.825,23.451-87.357,30.573-98.691
-          c0.013,0.003,0.025,0.006,0.038,0.009l-32.9-13.86C901.299,857.838,901.374,857.89,901.451,857.938z" fill="rgba(255,255,255, 1)"/>
-        <path id="body" d="M1035.81,669.5v94.431c0,41.801-34.009,75.811-75.81,75.811s-75.81-34.01-75.81-75.811V669.5h-34.989v94.434
-          c0,39.512,20.807,74.236,52.021,93.856l32.9,13.86c8.306,1.995,16.964,3.082,25.875,3.082c8.755,0,17.266-1.055,25.44-2.985
-          l33.116-13.804c-0.002-0.002-0.003-0.004-0.004-0.006c31.344-19.594,52.251-54.395,52.251-94.004V669.5H1035.81z" fill="rgba(255,255,255, 1)"/>
-        <path id="rightLeg" d="M985.908,871.642c7.157,11.392,26.773,46.911,30.578,98.691h35.082c-3.463-54.85-22.367-94.222-33.014-112.39
-          l-33.116,13.804C985.595,871.711,985.753,871.679,985.908,871.642z" fill="rgba(255,255,255, 1)"/>
-        <path id="rightFoot" d="M1016.489,970.369h-0.507c-9.661,0-17.494,7.833-17.494,17.495v74.644c0,9.662,7.833,17.494,17.494,17.494h130.627
-          c9.661,0,17.494-7.832,17.494-17.494v-18.661c0-40.515-32.962-73.478-73.478-73.478h-39.055c-0.001-0.012-0.002-0.024-0.003-0.036
-          h-35.082C1016.487,970.345,1016.488,970.357,1016.489,970.369z M1033.478,1005.356h57.148c21.223,0,38.488,17.266,38.488,38.488
-          v1.166h-95.637V1005.356z" fill="rgba(255,255,255, 1)"/>
-      </g>
-      </svg>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
+    </section>
 
-
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="gameSprocket" viewBox="0 0 418.879 418.879" style="enable-background:new 0 0 418.879 418.879;" xml:space="preserve">
-        <g>
-          <g>
-            <path class="circle-1 rotationClockwise" d="M188.634,234.066c8.462-5.287,16.126-11.735,22.767-19.127l23.942,13.826l21.8-37.76l-23.894-13.796    c3.038-9.275,4.825-19.113,5.16-29.311l27.183-4.793l-7.574-42.938l-27.178,4.793c-3.756-9.309-8.795-17.965-14.906-25.744    l17.766-21.17L200.3,30.022l-17.751,21.152c-8.67-4.646-18.059-8.119-27.954-10.203V13.385h-43.6v27.586    c-9.896,2.084-19.285,5.557-27.956,10.203l-17.75-21.152l-33.4,28.025l17.764,21.17c-6.11,7.779-11.149,16.436-14.905,25.744    L7.57,100.168L0,143.106l27.179,4.793c0.335,10.199,2.123,20.035,5.161,29.313L8.444,191.007l21.801,37.759l23.943-13.822    c6.639,7.389,14.303,13.838,22.766,19.125l-9.451,25.963l40.972,14.91l9.438-25.928c4.864,0.688,9.831,1.053,14.882,1.053    c5.051,0,10.019-0.363,14.883-1.053l9.437,25.93l40.97-14.914L188.634,234.066z M132.793,200.065    c-30.702,0-55.68-24.977-55.68-55.68c0-30.701,24.978-55.68,55.68-55.68s55.68,24.979,55.68,55.68    C188.473,175.088,163.496,200.065,132.793,200.065z" fill="rgba(255,255,255, 1)"/>
-            <path class="circle-2 rotationCounterClockwise" d="M376.041,266.807l-18.795,6.08c-3.584-6.229-8.014-11.869-13.115-16.779l10.504-16.764l-26.447-16.57l-10.498,16.75    c-6.604-2.438-13.602-3.973-20.826-4.471l-2.725-19.559l-30.912,4.309l2.725,19.559c-6.809,2.453-13.125,5.847-18.812,9.996    l-14.672-13.244l-20.912,23.168l14.684,13.259c-3.562,6.118-6.277,12.752-8.02,19.726l-19.744-0.714l-1.129,31.188l19.743,0.716    c1.246,7.198,3.486,13.991,6.558,20.271l-15.578,12.143l19.185,24.615l15.609-12.164c5.438,4.582,11.511,8.396,18.031,11.311    l-4.138,19.344l30.522,6.52l4.133-19.314c3.516,0.01,7.072-0.229,10.652-0.727c3.582-0.498,7.07-1.25,10.447-2.215l9.256,17.451    l27.574-14.623l-9.266-17.471c5.48-4.586,10.271-9.918,14.252-15.812l18.338,7.436l11.727-28.924l-18.303-7.422    c1.234-6.875,1.529-14.027,0.764-21.293l18.799-6.084L376.041,266.807z M297.129,350.006    c-21.771,3.031-41.949-12.209-44.98-33.977c-3.037-21.769,12.207-41.949,33.977-44.979c21.768-3.036,41.941,12.207,44.98,33.978    C334.135,326.795,318.896,346.969,297.129,350.006z" fill="rgba(255,255,255, 1)"/>
-            <path class="circle-3 rotationClockwise" d="M418.146,158.647l0.732-24.629l-15.586-0.463c-0.977-5.428-2.723-10.803-5.285-15.971l12.24-9.67l-15.271-19.33    l-12.238,9.666c-4.365-3.627-9.193-6.584-14.318-8.816l3.164-15.291l-24.123-4.996l-3.17,15.281    c-5.559,0.008-11.156,0.797-16.641,2.412l-7.391-13.727l-21.695,11.684l7.391,13.729c-4.363,3.686-8.107,7.934-11.176,12.566    l-14.496-5.77l-9.111,22.893l14.508,5.779c-0.955,5.508-1.141,11.158-0.514,16.799l-14.809,4.898l7.732,23.395l14.809-4.896    c2.9,4.986,6.426,9.396,10.426,13.201l-8.191,13.268l20.963,12.946l8.209-13.292c5.285,1.896,10.828,3.051,16.453,3.414    l2.252,15.453l24.383-3.561l-2.246-15.434c2.602-0.957,5.17-2.109,7.684-3.463c2.516-1.352,4.891-2.867,7.123-4.51l11.648,10.371    l16.387-18.398l-11.656-10.383c2.795-4.9,4.875-10.164,6.203-15.619L418.146,158.647z M359.436,171.844    c-15.281,8.227-34.404,2.492-42.627-12.783c-8.23-15.277-2.494-34.404,12.787-42.627c15.273-8.229,34.395-2.49,42.625,12.787    C380.443,144.499,374.711,163.616,359.436,171.844z" fill="rgba(255,255,255, 1)"/>
-          </g>
-        </g>
-        </svg>
-
-
-      <!-- GAME VIEW -->
-
-      <div class="cardContainer">
-        <div class="card">
-          <div class="front">
-            <h2>Front</h2>
-          </div>
-          <div class="back">
-            <h2>Back</h2>
-          </div>
-        </div>
-        <div class="cardButtons">
-          <div id="crossBtn">
-            <i class="fa fa-times" aria-hidden="true"></i>
-          </div>
-          <!-- <div id="flip">
-            Flip
-          </div> -->
-          <div id="next">
-            <i class="fa fa-check" aria-hidden="true"></i>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- CHALLENGE VIEW -->
-      <div class="challengeContainer">
-        <div class="challengeView">
-          <div class="challengeCard">
-              <h2>Front</h2>
-          </div>
-          <input id="input" type="text" name="answer" placeholder="Type answer" value=""></input>
-        </div>
-      </div>
-
-      <!-- <div id="checkBtn">
-        <h2>Check</h2>
-      </div> -->
-    </div>
-  </div>
-
-  <div class="col3">
-
-<!--
-      <img src="svg/robots/conveyor.svg" alt="box">
-
-
-      <img src="svg/robots/robot3.svg" alt="box">
-      <img src="svg/robots/robot4.svg" alt="box">
-      <img src="svg/robots/robot5.svg" alt="box"> -->
-
-
-  </div>
-
-
-  <!-- Trigger/Open The Modal -->
-  <div id="myBtn">
-    <span>Show stats</span>
-  </div>
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-  <!-- Modal content -->
-    <div class="modal-content">
-      <a href="#" class="close">x</a>
-      <h2 id="statistics">Your Statistics</h2>
-      <h2 class="stage">Stage: <span>1</span></h2>
-      <h2 class="levelUp">Level: <span>1</span></h2>
-      <p class="viewScore">Score: <span></span></p>
-      <p class="viewScoreToNextLvl">Score to next level: <span></span></p>
-      <p class="wordsLearned">Words learned: <span>0</span> </p>
-    </div>
-  </div>
-
-  <!-- The Correct Modal -->
-  <div id="correctModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content correct">
-      <a href="#" class="close">x</a>
-      <h2>Correct <i class="fa fa-check" aria-hidden="true"></i></h2>
-      <h2 class="p5"><span>+5</span> points</h2>
-      <h2 class="p20">Bonus <span>+20</span> points</h2>
-      <h2 class="p50">Bonus <span>+50</span> points</h2>
-    </div>
-
-  </div>
-
-  <!-- The Wrong Modal -->
-  <div id="wrongModal" class="modal">
-  <!-- Modal content -->
-    <div class="modal-content wrong">
-      <a href="#" class="close">x</a>
-      <h2>Wrong answer <i class="fa fa-times" aria-hidden="true"></i></h2>
-
-      <p>Correct answer: <br>
-      <span id="english">English</span></p>
-      <h3>Try Again</h3>
-    </div>
-  </div>
-
-  <!-- The Challenge Modal -->
-  <div id="challengeModal" class="modal">
-  <!-- Modal content -->
-    <div class="modal-content challenge">
-      <a href="#" class="close">x</a>
-      <h2>Now it is time for a challenge </h2>
-      <i class="fa fa-keyboard-o" aria-hidden="true"></i>
-      <ul>
-        <li>Every single correct answer will add 5 points to your score. </li>
-        <li>When you type a correct answer 3 times in a row you will collect +20 points bonus.</li>
-        <li>When you type a correct answer 6 times in a row you will collect +50 points bonus.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- LvlUp Modal -->
-  <div id="lvlUp" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content lvlUp">
-      <a href="#" class="close">x</a>
-      <h2 >Level Up <i class="fa fa-level-up" aria-hidden="true"></i></h2>
-      <p class="levelUp">Level: <span>1</span></p>
-      <p class="viewScore">Current score: <span></span></p>
-      <h2 class="p5"><span>+5</span> points</h2>
-      <h2 class="p20">Bonus <span>+20</span> points</h2>
-      <h2 class="p50">Bonus <span>+50</span> points</h2>
-      <h3>Good job <i class="fa fa-thumbs-up" aria-hidden="true"></i></h3>
-    </div>
-  </div>
-
-
-  <!-- Next Stage Modal -->
-  <div id="nxtStage" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content nxtStage">
-      <a href="#" class="close">x</a>
-      <h2 class="stage">Stage <span></span> completed <i class="fa fa-level-up" aria-hidden="true"></i></h2>
-      <p class="p5"><span>+5</span> points</p>
-      <p class="p20">Bonus <span>+20</span> points</p>
-      <p class="p50">Bonus <span>+50</span> points</p>
-      <p class="stageWords">Words learned: <span>0</span> </p>
-      <h3>Muy bien <i class="fa fa-thumbs-up" aria-hidden="true"></i></h3>
-    </div>
-  </div>
-
-
-  <!-- Welcome Modal -->
-  <div id="welcome" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content welcome">
-      <a href="#" class="close">x</a>
-      <h2>Hola!</h2>
-      <p>Welcome to Spanish Robot world. Everyone like to play games but many people don't have motivation to learn foreign languages. It's time to change that. Do you know that Spanish is one of the most widely spoken language in the world ? This game is going to teach you the first 100 spanish words simply by playing it. You have many challenges to achieve and big amounts of points and bonuses to collect. You can always click on statistics to find out about your current progress. </p>
-      <h3>Enjoy the learning process and have fun.<br> <i class="fa fa-thumbs-up" aria-hidden="true"></i></h3>
-    </div>
-  </div>
-</div>
-
-
-
-
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="js/granim/dist/granim.min.js"></script>
-<script type="text/javascript" src="js/words/words.js"></script>
-<!-- <script type="text/javascript" src="js/SVG-Morpheus-master/compile/minified/svg-morpheus.js"></script> -->
-<script type="text/javascript" src="js/app.js"></script>
-</body>
+  
+  </body>
 </html>
